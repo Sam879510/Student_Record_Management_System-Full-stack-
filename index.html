@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Record Management System</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="container">
+    <h1>Student Record Management System</h1>
+    
+    <!-- Options -->
+    <div id="menu">
+        <button onclick="showAddStudentForm()">Add Student</button>
+        <button onclick="viewStudents()">View All Students</button>
+        <button disabled>Search Student by ID (Coming Soon)</button>
+        <button disabled>Update Student (Coming Soon)</button>
+        <button disabled>Delete Student (Coming Soon)</button>
+        <button onclick="saveToFile()">Save to File</button>
+        <button onclick="loadFromFile()">Load from File</button>
+    </div>
+
+    <!-- Add Student Form -->
+    <form onsubmit="return false;">
+        <input type="text" id="id" placeholder="ID" />
+        <input type="text" id="name" placeholder="Name" />
+        <input type="text" id="age" placeholder="Age" />
+        <input type="text" id="course" placeholder="Course" />
+        <button type="button" id="addStudentBtn">Add Student</button>
+    </form>
+
+    <button id="viewStudentsBtn">View Students</button>
+
+    <input type="number" id="searchId" placeholder="Enter ID to Search">
+    <button onclick="searchStudentById()">Search Student</button>
+
+
+    <!-- Table to View Students -->
+    <table id="students-table" border="1">
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Name</th>
+                <th>Age</th>
+                <th>Course</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody></tbody>
+    </table>
+</div>
+
+<script src="app.js"></script>
+
+</body>
+</html>
